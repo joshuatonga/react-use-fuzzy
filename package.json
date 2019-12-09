@@ -26,8 +26,13 @@
   ],
   "author": "Joshua Tonga <hellojoshuatonga@gmail.com> (https://hellojoshuatonga.github.io/)",
   "license": "MIT",
+  "peerDependencies": {
+    "react": ">= 16",
+    "fuse.js": "^3.4.5"
+  },
   "devDependencies": {
     "@types/jest": "^24.0.23",
+    "@types/react": "^16.9.15",
     "concurrently": "^5.0.0",
     "jest": "^24.9.0",
     "nodemon": "^2.0.1",
@@ -37,5 +42,9 @@
     "tslint": "^5.20.1",
     "typescript": "^3.7.3",
     "wait-on": "^3.3.0"
+  },
+  "dependencies": {
+    "fuse.js": "^3.4.6",
+    "react": "^16.12.0"
   }
 }

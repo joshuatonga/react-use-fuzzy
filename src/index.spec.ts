@@ -1,7 +1,7 @@
-import { hello } from './';
+const hello = () => 1;
 
-describe('hello', () => {
-  it('should hello', () => {
+describe('hello world', () => {
+  it('should greet', () => {
     expect(hello()).toEqual(1);
   });
 });

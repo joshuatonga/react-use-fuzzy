@@ -12,8 +12,27 @@ $ npm install --save react-use-fuzzy
 ```
 
 ## Usage
-```js
+```typescript
 import { useFuzzy } from 'react-use-fuzzy';
+// You can also use the alias useSearch if you want
+
+interface Product {
+  id: number;
+  name: string;
+}
+
+const products: Product[] = [
+  {
+    id: 1,
+    name: 'T-shirt',
+  }
+  {
+    id: 2,
+    name: 'Short',
+  }
+];
+
+const { result, keyword, search, resetSearch } = useFuzzy<Product>(products, { keywords: ['name'] });
 ```
 
 ## License

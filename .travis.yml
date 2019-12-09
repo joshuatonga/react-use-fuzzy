@@ -3,7 +3,7 @@ node_js:
   - v10.16.0
 script:
   - npm run lint
-  - npm run test:cov
+  - npm run test
 cache:
   - npm
 after_success:
