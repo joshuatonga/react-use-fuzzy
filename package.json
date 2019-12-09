@@ -1,6 +1,6 @@
 {
   "name": "react-use-fuzzy",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "React hook for client side fuzzy search using Fuse.js",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
