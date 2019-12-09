@@ -1,19 +1,19 @@
-# React Typescript NPM Boilerplate
+# react-use-fuzzy
 
-[![NPM version](https://img.shields.io/npm/v/react-typescript-npm.svg?style=flat-square)](https://npmjs.org/package/react-typescript-npm)
-[![Build Status](https://img.shields.io/travis/hellojoshuatonga/react-typescript-npm/master.svg?style=flat-square)](https://travis-ci.org/hellojoshuatonga/react-typescript-npm)
-[![Coverage Status](https://img.shields.io/codecov/c/github/hellojoshuatonga/react-typescript-npm/master.svg?style=flat-square)](https://codecov.io/gh/hellojoshuatonga/react-typescript-npm/branch/master)
+[![NPM version](https://img.shields.io/npm/v/react-use-fuzzy.svg?style=flat-square)](https://npmjs.org/package/react-use-fuzzy)
+[![Build Status](https://img.shields.io/travis/hellojoshuatonga/react-use-fuzzy/master.svg?style=flat-square)](https://travis-ci.org/hellojoshuatonga/react-use-fuzzy)
+[![Coverage Status](https://img.shields.io/codecov/c/github/hellojoshuatonga/react-use-fuzzy/master.svg?style=flat-square)](https://codecov.io/gh/hellojoshuatonga/react-use-fuzzy/branch/master)
 
-Your description here.
+A react hook in Typescript for client side fuzzy search using [Fuse.js](https://github.com/krisk/fuse).
 
 ## Install
 ```bash
-$ npm install --save your-npm-library
+$ npm install --save react-use-fuzzy
 ```
 
 ## Usage
 ```js
-// Your sample usage here
+import { useFuzzy } from 'react-use-fuzzy';
 ```
 
 ## License
