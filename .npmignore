@@ -12,10 +12,19 @@ node_modules
 package-lock.json
 yarn.lock
 
-# project files
+# Project files
 src
 test
 examples
 .travis.yml
 .babelrc
 .gitignore
+
+# TODO: Remove .npmignore and use files property of package.json instead
+lib/*.map
+lib/*.tsbuildinfo
+.prettierrc                   
+nodemon.json                  
+tsconfig.build.json           
+tsconfig.json                 
+tslint.json                   
