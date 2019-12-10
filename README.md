@@ -15,7 +15,6 @@ $ npm install --save react-use-fuzzy
 ```typescript
 import React, { useState } from 'react';
 import { useFuzzy } from 'react-use-fuzzy';
-
 import './App.css';
 
 interface Product {
@@ -63,7 +62,12 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-      <input type="text" placeholder="Search products" value={keyword} onChange={(e) => search(e.target.value)} />
+        <input
+          type="text"
+          placeholder="Search products"
+          value={keyword}
+          onChange={(e) => search(e.target.value)}
+          />
         <ProductsList products={result} />
       </header>
     </div>
@@ -73,8 +77,12 @@ const App: React.FC = () => {
 export default App;
 ```
 
+## ⛓️ Peer Dependencies
+- [React](https://www.npmjs.com/package/react) (16.x.x)
+- [Fuse.js](https://www.npmjs.com/package/fuse.js/v/3.4.3) (3.x.x)
+
 ## 🎉 Acknowledgements
-- Inspired by [react-use-fuse](https://github.com/MartinL83/react-use-fuse) Fuse.js wrapper
+- Inspired by [react-use-fuse](https://github.com/MartinL83/react-use-fuse) Fuse.js wrapper.
 
 
 ## License

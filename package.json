@@ -44,10 +44,8 @@
     "ts-node": "^8.5.4",
     "tslint": "^5.20.1",
     "typescript": "^3.7.3",
-    "wait-on": "^3.3.0"
-  },
-  "dependencies": {
-    "fuse.js": "^3.4.6",
+    "wait-on": "^3.3.0",
+    "fuse.js": "^3.4.5",
     "react": "^16.12.0"
   }
 }
