@@ -37,7 +37,11 @@ interface ProductsListProps {
 const ProductsList: React.FC<ProductsListProps> = ({ products }) => {
   return (
     <ul>
-    { products.map((product) => <ProductItem key={product.id} product={product} />)}
+    {
+      products.map((product) => (
+        <ProductItem key={product.id} product={product} />
+      ))
+    }
     </ul>
   )
 }
@@ -60,11 +64,11 @@ const App: React.FC = () => {
   });
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className='App'>
+      <header className='App-header'>
         <input
-          type="text"
-          placeholder="Search products"
+          type='text'
+          placeholder='Search products'
           value={keyword}
           onChange={(e) => search(e.target.value)}
           />
