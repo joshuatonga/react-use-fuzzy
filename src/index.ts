@@ -16,7 +16,7 @@ export function useFuzzy<T>(
   const resetSearch = () => setKeyword('');
 
   const searcher = useMemo(() => {
-    const defaultOptions = { tokenize: true, threshold: 0.6 };
+    const defaultOptions = { tokenize: true, threshold: 0.2 };
     return new Fuse(data, { ...defaultOptions, ...options });
   }, [data, options]);
   const result: T[] = keyword ? (searcher.search(keyword) as T[]) : data;
