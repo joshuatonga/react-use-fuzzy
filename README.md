@@ -6,34 +6,76 @@
 
 A react hook in Typescript for client side fuzzy search using [Fuse.js](https://github.com/krisk/fuse).
 
-## Install
+## 🚀  Install
 ```bash
 $ npm install --save react-use-fuzzy
 ```
 
-## Usage
+## 🎈 Usage
 ```typescript
+import React, { useState } from 'react';
 import { useFuzzy } from 'react-use-fuzzy';
-// You can also use the alias useSearch if you want
+
+import './App.css';
 
 interface Product {
   id: number;
   name: string;
 }
 
-const products: Product[] = [
-  {
-    id: 1,
-    name: 'T-shirt',
-  }
-  {
-    id: 2,
-    name: 'Short',
-  }
-];
+interface ProductItemProps {
+  product: Product;
+}
 
-const { result, keyword, search, resetSearch } = useFuzzy<Product>(products, { keywords: ['name'] });
+const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
+  return <li>{product.name}</li>;
+}
+
+interface ProductsListProps {
+  products: Product[];
+}
+
+const ProductsList: React.FC<ProductsListProps> = ({ products }) => {
+  return (
+    <ul>
+    { products.map((product) => <ProductItem key={product.id} product={product} />)}
+    </ul>
+  )
+}
+
+const App: React.FC = () => {
+  const productsData: Product[] = [
+    {
+      id: 1,
+      name: 'T-shirt',
+    },
+    {
+      id: 2,
+      name: 'Short',
+    },
+  ]
+  const [products, setProducts] = useState<Product[]>(productsData);
+
+  const { result, keyword, search } = useFuzzy<Product>(products, {
+    keys: ['name'],
+  });
+
+  return (
+    <div className="App">
+      <header className="App-header">
+      <input type="text" placeholder="Search products" value={keyword} onChange={(e) => search(e.target.value)} />
+        <ProductsList products={result} />
+      </header>
+    </div>
+  );
+}
+
+export default App;
 ```
+
+## 🎉 Acknowledgements
+- Inspired by [react-use-fuse](https://github.com/MartinL83/react-use-fuse) Fuse.js wrapper
+
 
 ## License
 MIT ©

@@ -21,10 +21,11 @@
   },
   "keywords": [
     "react",
-    "typescript",
-    "library",
-    "boilerplate",
-    "module"
+    "hooks",
+    "fuzzy",
+    "fuzzy-search",
+    "fuse.js",
+    "client-search"
   ],
   "author": "Joshua Tonga <hellojoshuatonga@gmail.com> (https://hellojoshuatonga.github.io/)",
   "license": "MIT",
