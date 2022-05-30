@@ -1,8 +1,8 @@
 {
-  "name": "react-use-fuzzy",
-  "version": "1.1.0",
+  "name": "@reaviz/react-use-fuzzy",
+  "version": "1.0.0",
   "description": "React hook for client side fuzzy search using Fuse.js",
-  "homepage": "https://github.com/hellojoshuatonga/react-use-fuzzy#readme",
+  "homepage": "https://github.com/reaviz/react-use-fuzzy#readme",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -27,7 +27,6 @@
     "fuse.js",
     "client-search"
   ],
-  "author": "Joshua Tonga <hellojoshuatonga@gmail.com> (https://hellojoshuatonga.github.io/)",
   "license": "MIT",
   "peerDependencies": {
     "react": ">= 16",
