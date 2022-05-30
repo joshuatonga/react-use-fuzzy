@@ -1,4 +1,4 @@
-import Fuse, { FuseOptions } from 'fuse.js';
+import Fuse from 'fuse.js';
 import { useMemo, useState } from 'react';
 
 export interface IFuzzyClient<T> {
@@ -10,7 +10,7 @@ export interface IFuzzyClient<T> {
 
 export function useFuzzy<T>(
   data: T[],
-  options: FuseOptions<T>,
+  options: Fuse.IFuseOptions<T>,
 ): IFuzzyClient<T> {
   const [keyword, setKeyword] = useState('');
   const resetSearch = () => setKeyword('');
@@ -19,7 +19,7 @@ export function useFuzzy<T>(
     const defaultOptions = { tokenize: true, threshold: 0.2 };
     return new Fuse(data, { ...defaultOptions, ...options });
   }, [data, options]);
-  const result: T[] = keyword ? (searcher.search(keyword) as T[]) : data;
+  const result: T[] = keyword ? (searcher.search(keyword) as unknown as T[]) : data;
 
   return {
     keyword,
