@@ -19,7 +19,9 @@ export function useFuzzy<T>(
     const defaultOptions = { tokenize: true, threshold: 0.2 };
     return new Fuse(data, { ...defaultOptions, ...options });
   }, [data, options]);
-  const result: T[] = keyword ? (searcher.search(keyword) as unknown as T[]) : data;
+  const result: T[] = keyword
+    ? (searcher.search(keyword) || []).map(r => r.item)
+    : data;
 
   return {
     keyword,

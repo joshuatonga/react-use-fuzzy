@@ -1,6 +1,6 @@
 {
   "name": "@reaviz/react-use-fuzzy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React hook for client side fuzzy search using Fuse.js",
   "homepage": "https://github.com/reaviz/react-use-fuzzy#readme",
   "main": "lib/index.js",
